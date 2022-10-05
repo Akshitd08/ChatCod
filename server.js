@@ -17,6 +17,13 @@ const io = socketio(server);
 // Set static folder
 app.use(express.static(path.join(__dirname, "public")));
 
+app.get('/index.html', function (req, res) {
+    res.sendFile(path.join(__dirname, 'index.html'))
+});
+
+app.get('/chat.html',function(req,res){
+    res.sendFile(path.join(__dirname,'chat.html'))
+    });
 const botName = "ChatCord Bot";
 
 
