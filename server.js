@@ -2,6 +2,7 @@ const path = require("path");
 const http = require("http");
 const express = require("express");
 const socketio = require("socket.io");
+const cors = require('cors');
 const formatMessage = require("./messages");
 const {
     userJoin,
@@ -13,6 +14,7 @@ const {
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
+app.use(cors());
 // Set static folder
 app.use(express.static(path.join(__dirname, "chat_app")));
 
