@@ -13,7 +13,6 @@ const {
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
-io.set('transports', ['websocket']);
 // Set static folder
 app.use(express.static(path.join(__dirname, "chat_app")));
 
