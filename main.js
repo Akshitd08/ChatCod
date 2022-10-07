@@ -1,4 +1,4 @@
-const socket = io('/',{transports: ['websocket'],upgrade:false});
+const socket = io('https://akshitd08.github.io/ChatCord/');
 const chatForm = document.getElementById('chat-form');
 const chatMessages = document.querySelector('.chat-messages');
 const roomName = document.getElementById('room-name');
